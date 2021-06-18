@@ -8,7 +8,11 @@ def email_automation():
         for row in reader:
             name = row[0]+' '+row[1]
             mail = row[2]
-            message = (f"Dear {name},Welcome here")
+            message = (
+                f"""
+                Dear {name},Welcome here
+                Nothing to say Much
+                """)
             s = smtplib.SMTP('smtp.gmail.com', 587)
             s.starttls()
             s.login("Your email", "your Password")
